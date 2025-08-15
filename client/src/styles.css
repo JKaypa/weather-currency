@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --background:#01070f;
+  --primary: #235f9a;
+  --secondary: #d8c518;
+  --tertiary: #f8f9fa;
+  --text-primary: #e5f7ff;
+  --text-secondary: #6c757d;
+
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.button {
+  height: 50px;
+  background-color: var(--secondary);
+  color: var(--background);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}

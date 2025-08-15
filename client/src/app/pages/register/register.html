@@ -1,0 +1,18 @@
+  <h1 class="text-center">Regístrate Gratis</h1>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
+    <label class="register-form__label">
+      Nombre
+      <input type="text" formControlName="name" class="register-form__input">
+    </label>
+    <label class="register-form__label">
+      Email
+      <input type="email" formControlName="email" class="register-form__input">
+    </label>
+    <label class="register-form__label">
+      Password
+      <input type="password" formControlName="password" class="register-form__input">
+    </label>
+    <button type="submit" class="button">Registro</button>
+  </form>
+
+  <p class="text-center">Ya estás registrado? Entonces <a routerLink="/login">inicia sesión</a></p>
