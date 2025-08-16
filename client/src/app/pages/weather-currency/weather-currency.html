@@ -1,0 +1,31 @@
+<div class="wc-container">
+
+  <p class="wc-city">{{ destination.selectedCity()?.name }}</p>
+  <p class="wc-country">{{ destination.selectedCountry()?.name }}</p>
+  <p class="wc-temp">{{ destination.temperature() }}°C</p>
+  <p class="wc-weather">{{ destination.weather() }}</p>
+
+  <br>
+
+  <p class="wc-amount-label">Cantidad de divisa de destino</p>
+  <div class="wc-amount-value">
+    <span class="wc-currency-symbol">{{ destination.selectedCurrency()?.symbol }}</span>
+    <span class="wc-converted">{{ destination.convertedAmount() }}</span>
+    <span class="wc-currency-code">{{ destination.selectedCurrency()?.code }}</span>
+  </div>
+
+
+  <div class="wc-currency-name">
+    {{ destination.selectedCurrency()?.name }}
+
+  </div>
+
+
+  <p class="wc-rate-label">Tasa de conversión</p>
+  <p class="wc-rate-value">{{ destination.currencyRate() }}</p>
+
+
+  <button class="button route-button" (click)="destination.reset()">Volver a iniciar</button>
+
+
+</div>

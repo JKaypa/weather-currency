@@ -1,0 +1,54 @@
+.wc-container{
+  min-height: 374px;
+  max-width: 500px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #12122f;
+  border-radius: 12px;
+  padding: 30px 40px;
+  color: var(--text-primary);
+}
+
+.wc-city{
+  font-size: 3rem;
+  font-weight: 600;
+
+}
+
+.wc-country{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.wc-temp{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.wc-currency-symbol{
+  font-size: 2.5rem;
+}
+
+.wc-currency-code{
+  font-size: 2.5rem;
+}
+
+.wc-amount-value {
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+}
+
+.wc-converted{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.route-button{
+  padding: 10px;
+  margin-top: 40px;
+}
+

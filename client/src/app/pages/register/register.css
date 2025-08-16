@@ -12,12 +12,31 @@
 .register-form__label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  gap: 5px
 }
 
 .register-form__input {
   padding: 0.5rem;
-  margin-top: 0.5rem;
   border: none;
   border-radius: 5px;
+}
+
+.invalid-input {
+  color: red;
+  height: 20px
+}
+
+.button_submit {
+  margin: 20px 0 10px 0
+}
+
+.disabled {
+  background-color: lightgray;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  transform: scale(1);
 }

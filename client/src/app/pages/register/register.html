@@ -4,15 +4,74 @@
       Nombre
       <input type="text" formControlName="name" class="register-form__input">
     </label>
+    <div class="invalid-input">
+      @if (name?.invalid && (name?.dirty || name?.touched)) {
+      <div class="alert alert-danger">
+        @if (name?.hasError('required')) {
+          <small>
+            Nombre es requerido.
+          </small>
+        }
+        @if (name?.hasError('minlength')) {
+          <small>
+            Nombre debe tener al menos 3 caracteres.
+          </small>
+        }
+        @if (name?.hasError('maxlength')) {
+          <small>
+            Nombre debe tener 20 caracteres máximo
+          </small>
+        }
+      </div>
+      }
+    </div>
     <label class="register-form__label">
       Email
       <input type="email" formControlName="email" class="register-form__input">
     </label>
+    <div class="invalid-input">
+      @if (email?.invalid && (email?.dirty || email?.touched)) {
+        <div class="alert alert-danger">
+          @if (email?.hasError('required')) {
+            <small>
+              Email es requerido.
+            </small>
+          }
+          @if (email?.hasError('email')) {
+            <small>
+              Debe ser un email válido.
+            </small>
+          }
+        </div>
+      }
+    </div>
     <label class="register-form__label">
       Password
       <input type="password" formControlName="password" class="register-form__input">
     </label>
-    <button type="submit" class="button">Registro</button>
+    <div class="invalid-input">
+      @if (password?.invalid && (password?.dirty || password?.touched)) {
+        <div class="alert alert-danger">
+          @if (password?.hasError('required')) {
+            <small>
+              Password es requerido.
+            </small>
+          }
+          @if (password?.hasError('minlength')) {
+            <small>
+              Password debe tener al menos 8 caracteres.
+            </small>
+          }
+          @if (password?.hasError('maxlength')) {
+            <small>
+              Password debe tener 15 caracteres máximo.
+            </small>
+          }
+        </div>
+      }
+    </div>
+    <button type="submit" [disabled]="!registerForm.valid" class="button button_submit"
+            [class.disabled]="!registerForm.valid">Registro</button>
   </form>
 
   <p class="text-center">Ya estás registrado? Entonces <a routerLink="/login">inicia sesión</a></p>

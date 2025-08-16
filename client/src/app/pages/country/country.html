@@ -1,0 +1,34 @@
+<div class="selector-container">
+  <div class="selector-group">
+    <label class="selector-label">
+      1. Elige tu país destino:
+      <select (change)="onCountryChange($event)">
+        <option value="">-- Selecciona un país --</option>
+        @for (country of (destService.countries() ?? []); track country.id) {
+          <option [value]="country.id">{{ country.name }}</option>
+        }
+      </select>
+    </label>
+  </div>
+
+  <div class="selector-group">
+    <label class="selector-label">
+      2. Elige una ciudad:
+      <select (change)="onCityChange($event)">
+        <option value="">-- Selecciona una ciudad --</option>
+        @for (city of (destService.cities() ?? []); track city.id) {
+          <option [value]="city.id">{{ city.name }}</option>
+        }
+      </select>
+    </label>
+  </div>
+
+  <div class="selection-summary">
+  @if (destService.selectedCountry() || destService.selectedCity()) {
+      Has elegido:
+      {{ destService.selectedCountry()?.name }}  {{ destService.selectedCity()?.name }}
+  }
+  </div>
+
+  <button class="button route-button" (click)="next()">Siguiente</button>
+</div>

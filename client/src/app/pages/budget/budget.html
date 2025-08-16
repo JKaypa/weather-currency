@@ -1,0 +1,15 @@
+<div class="selector-container">
+  <div class="selector-group">
+    <label class="selector-label">
+      3. Ingresa tu presupuesto:
+      <input type="number" [ngModel]="destination.selectedBudget()" (ngModelChange)="onBudgetChange($event)"/>
+    </label>
+  </div>
+
+  <h2 class="amount">$ {{destination.selectedBudget()}} COP</h2>
+
+  <div class="actions">
+    <button class="button route-button" (click)="back()">Atrás</button>
+    <button class="button route-button" (click)="next()">Siguiente</button>
+  </div>
+</div>
