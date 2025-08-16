@@ -2,6 +2,8 @@
 
 Aplicación Full‑Stack que permite a un usuario autenticarse, elegir destino (país/ciudad), consultar el clima y convertir monedas en una sola vista.
 
+<img src="currency_weather.png" />
+
 ## Stack y estructura
 - Frontend: Angular (interceptores, guards, rutas).
 - Backend: Laravel (API REST) + Sanctum (tokens).
