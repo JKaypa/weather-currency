@@ -39,6 +39,8 @@ Variables de entorno requeridas (API):
 - `Country` 1—N `City`
 - `History` N—1 (`User`, `Country`, `City`, `Currency`)
 
+<img src="ERD.png" />
+
 Modelos principales: Country, City, Currency, History. Migraciones incluidas para `countries` y `cities` (con claves foráneas y borrado en cascada).
 
 ## Puesta en marcha
